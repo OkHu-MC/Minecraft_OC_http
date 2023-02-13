@@ -65,13 +65,13 @@ def data_set201():
     img_array = np.asarray(img) #numpyで扱える配列をつくる
     print(img_array)
     temp21 =img_array.shape    
-    fx= open("NOX_SS/Atest.lua", mode='w')
+    fx= open("temp/Atest.lua", mode='w')
     for xx in range(temp21[0]):
         fx.write("dofile(\"test"+str(xx)+".lua\")\n")
         
         print("x",end="")
         time.sleep(0.1)
-        with open("NOX_SS/test"+str(xx)+".lua", mode='w') as f:
+        with open("temp/test"+str(xx)+".lua", mode='w') as f:
             f.write("IMage_index = {")    
             
             for yy in range(temp21[1]):
